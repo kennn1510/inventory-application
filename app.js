@@ -4,6 +4,7 @@ const app = express();
 const path = require("node:path");
 const homeRouter = require("./routes/homeRouter");
 const gamesRouter = require("./routes/gamesRouter");
+const genresRouter = require("./routes/genresRouter");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use("/", homeRouter);
 app.use("/games", gamesRouter);
+app.use("/genres", genresRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);
