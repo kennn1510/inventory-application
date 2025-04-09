@@ -6,6 +6,8 @@ Project: Inventory Application
 
 Technologies used: HTMl, CSS, Javascript, NodeJS, Express, EJS, PostgreSQL
 
+GAME MANAGEMENT APP
+
 // Use DBML to define my database structure
 // Docs: https://dbml.dbdiagram.io/docs
 
