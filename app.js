@@ -15,7 +15,9 @@ app.use("/", gameRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(err.statusCode || 500).send(err.message);
+  // name: message gets returns
+  // only the status code is send back to the server
+  res.status(err.statusCode).render("error", { error: err });
 });
 
 app.listen(process.env.PORT, (req, res) => {
