@@ -11,29 +11,29 @@ GAME MANAGEMENT APP
 // Use DBML to define my database structure
 // Docs: https://dbml.dbdiagram.io/docs
 
-Table game {
+Table games {
 game_id int [primary key, increment]
 title varchar(255) [not null]
 }
 
-Table genre {
+Table genres {
 genre_id int [primary key, increment]
 name varchar(100) [not null, unique]
 }
 
-Table developer {
+Table developers {
 developer_id int [primary key, increment]
 name varchar(255) [not null, unique]
 }
 
-Table game_genre {
-game_id int [ref: > game.game_id]
-genre_id int [ref: > genre.genre_id]
+Table game_genres {
+game_id int [ref: > games.game_id]
+genre_id int [ref: > genres.genre_id]
 Primary Key (game_id, genre_id) // Composite primary key
 }
 
-Table game_developer {
-game_id int [ref: > game.game_id]
-developer_id int [ref: > developer.developer_id]
+Table game_developers {
+game_id int [ref: > games.game_id]
+developer_id int [ref: > developers.developer_id]
 Primary Key (game_id, developer_id) // Composite primary key
 }
