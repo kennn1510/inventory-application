@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= message %></title>
+    <title>Game</title>
   </head>
   <body>
-    <h1><%= message %></h1>
+    <ul>
+      <% for (game of games) { %>
+      <li><%= game.title %></li>
+      <% } %>
+    </ul>
   </body>
 </html>
