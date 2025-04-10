@@ -18,7 +18,7 @@ app.use("/genres", genresRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(err.statusCode).render("error", { error: err });
+  res.status(err.statusCode).render("errorView", { error: err });
 });
 
 app.listen(process.env.PORT, (req, res) => {
