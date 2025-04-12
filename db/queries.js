@@ -10,7 +10,13 @@ async function getAllGenres() {
   return rows;
 }
 
+async function getAllDevs() {
+  const { rows } = await pool.query("SELECT * FROM developers");
+  return rows;
+}
+
 module.exports = {
   getAllGames,
   getAllGenres,
+  getAllDevs,
 };
