@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+}
+
+body {
+  max-height: 100%;
+  box-sizing: border-box;
+  background-color: #dad7cd;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+h1 {
+  color: #344e41;
+}
